@@ -22,7 +22,11 @@ export default {
       },
       fontFamily:{
         'sans':['"Roboto"',...defaultTheme.fontFamily.sans],
-      }
+      },
+      gridTemplateColumns: {
+        'auto-fit-100': 'repeat(auto-fit, minmax(260px, 1fr))',
+
+      },
     },
   },
   plugins: [],

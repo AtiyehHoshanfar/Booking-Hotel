@@ -1,0 +1,23 @@
+import useFetch from "../hooks/useFetch";
+import toast from "react-hot-toast";
+import PopularLocations from "./PopularLocation";
+import Hotel from "./Hotel";
+
+function HotelContainer() {
+  const { data, isLoading } = useFetch("http://localhost:3000/hotels");
+  return (
+    <div className="flex container mx-auto -z-50 ">
+      <div className="m-2 gap-2  grid grid-cols-auto-fit-100  w-full md:m-0 lg:w-8/12">
+        {isLoading
+          ? toast.loading("waiting...")
+          : data.map((hotel) => <Hotel key={hotel.id} hotel={hotel} />)}
+      </div>
+      <div className="w-1/3 hidden lg:block">
+      <PopularLocations hotels={data} />
+      </div>
+    </div>
+  );
+}
+
+export default HotelContainer;
+

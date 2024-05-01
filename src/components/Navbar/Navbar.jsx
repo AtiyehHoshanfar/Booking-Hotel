@@ -31,7 +31,7 @@ function Navbar() {
     );
   };
   return (
-    <div>
+    <div className="container mx-auto">
       <div className="p-2">
         <div className="flex items-center mb-2">
           <button className="bg-grayPrimary-200 flex items-center justify-center w-10 h-10 rounded-full md:w-16 md:h-16">
