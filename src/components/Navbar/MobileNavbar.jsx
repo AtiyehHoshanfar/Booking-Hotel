@@ -13,7 +13,7 @@ export default function MobileNavbar({ filterItems, onSetOperation,date,setDate 
   const [search, setSearch] = useState("");
   const [OpenModalOption, setOpenModalOption] = useState(false);
   const [OpenModalDate, setOpenModalDate] = useState(false);
-  const { data, isLoading } = useFetch("http://localhost:3000/hotels", search);
+  const { data } = useFetch("http://localhost:3000/hotels", search);
   const handleSearch = () => {
     const foundHotel = data.filter((hotel) =>
       hotel.name.toLowerCase().includes(search.toLowerCase())
@@ -76,12 +76,12 @@ export default function MobileNavbar({ filterItems, onSetOperation,date,setDate 
       </div>
 
       {OpenModalOption && (
-        <Modal cb={setOpenModalOption}>
+        <Modal onClick={setOpenModalOption}>
           <Options filterItems={filterItems} onSetOperation={onSetOperation} />
         </Modal>
       )}
       {OpenModalDate && (
-        <Modal cb={setOpenModalDate}>
+        <Modal onClick={setOpenModalDate}>
           <DateRanger date={date} setDate={setDate}/>
         </Modal>
       )}

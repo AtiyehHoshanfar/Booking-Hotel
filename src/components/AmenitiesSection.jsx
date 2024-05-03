@@ -1,4 +1,4 @@
-import { MapContainer, Marker, Popup } from "react-leaflet";
+import { MapContainer, Marker } from "react-leaflet";
 function AmenitiesSection() {
   return (
 <div className=" hidden lg:block w-1/4">

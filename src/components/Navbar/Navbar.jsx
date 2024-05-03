@@ -10,6 +10,7 @@ function Navbar() {
     { type: "Adults", count: 1, minLength: 1, icon: <FaPerson /> },
     { type: "Children", count: 1, minLength: 0, icon: <FaBaby /> },
     { type: "Rooms", count: 1, minLength: 1, icon: <FaBed /> },
+
   ]);
 
   const [date, setDate] = useState([
@@ -48,7 +49,7 @@ function Navbar() {
           date={date}
           setDate={setDate}
         />
-        <DesktopNavbar filterItems={filterItems} />
+        <DesktopNavbar filterItems={filterItems}  onSetOperation={handleOperation} />
       </div>
     </div>
   );

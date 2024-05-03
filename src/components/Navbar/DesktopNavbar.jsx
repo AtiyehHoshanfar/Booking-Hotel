@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { FaLocationDot } from "react-icons/fa6";
-export default function DesktopNavbar({filterItems}) {
-  const [search,setSearch]=useState("")
+import { FaLocationDot, FaCaretUp, FaCaretDown } from "react-icons/fa6";
+
+export default function DesktopNavbar({
+  filterItems,
+  onSetOperation,
+}) {
+  const [search, setSearch] = useState("");
 
   return (
     <div className="hidden md:block">
@@ -11,8 +15,8 @@ export default function DesktopNavbar({filterItems}) {
             <FaLocationDot className="fill-grayPrimary-500 text-2xl " />
           </button>
           <input
-          value={search}
-          onChange={(e)=>setSearch(e.target.value)}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
             type="text"
             className="p-3 w-full outline-0"
             placeholder="San Francisco , Stockton Street "
@@ -25,7 +29,17 @@ export default function DesktopNavbar({filterItems}) {
       <div className="flex items-center">
         <span className="m-2">Filter by Search :</span>
         {filterItems.map((item) => (
-          <FilterItem key={item.type} item={item} />
+          <FilterItem key={item.type} item={item}>
+            <div className="flex flex-col p-2">
+              <button onClick={()=>onSetOperation(item.type,"inc")}>
+                <FaCaretUp className="text-2xl -mb-3 fill-redPrimary-500 " />
+              </button>
+              <button disabled={item.count<=item.minLength} onClick={()=>onSetOperation(item.type,"dec")}>
+                {" "}
+                <FaCaretDown className="text-2xl fill-redPrimary-500" />
+              </button>
+            </div>
+          </FilterItem>
         ))}
       </div>
     </div>
