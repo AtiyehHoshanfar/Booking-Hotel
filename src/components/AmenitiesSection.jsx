@@ -1,44 +1,44 @@
 import { MapContainer, Marker } from "react-leaflet";
 function AmenitiesSection() {
   return (
-<div className=" hidden lg:block w-1/4">
-<div className="  bg-white  m-2 rounded-lg  p-2 relative shadow-md ">
-      <h2 className="text-grayPrimary-600 font-bold text-3xl mb-6">
-        Amenities
-      </h2>
+    <div className="w-full  xl:w-1/4">
+      <div className=" bg-bgColor md:bg-white  m-2 rounded-lg  p-3 relative  md:shadow-md ">
+        <h2 className="text-grayPrimary-600 p-3 font-bold text-3xl mb-2 xl:mb-4">
+          Amenities
+        </h2>
 
-      <ul className="flex flex-col mb-4">
-        <AmenityItem />
-        <AmenityItem />
-        <AmenityItem />
-        <AmenityItem />
-        <AmenityItem />
-      </ul>
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
-        <Marker position={[51.505, -0.09]}></Marker>
-      </MapContainer>
-      <div className="flex items-center ">
-        <div className="flex items-center p-2">
-          <span className="text-md font-bold md:text-lg">50.00 &nbsp;</span>
-          <span className="text-sm text-[#85758A] md:text-lg">
-            {" "}
-            / &nbsp;night
-          </span>
+        <ul className="flex flex-row xl:flex-col mb-4 overflow-x-auto ">
+          <AmenityItem />
+          <AmenityItem />
+          <AmenityItem />
+          <AmenityItem />
+          <AmenityItem />
+        </ul>
+        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
+          <Marker position={[51.505, -0.09]}></Marker>
+        </MapContainer>
+        <div className="xl:flex items-center hidden">
+          <div className="flex items-center p-2">
+            <span className="text-md font-bold md:text-lg">50.00 &nbsp;</span>
+            <span className="text-sm text-[#85758A] md:text-lg">
+              {" "}
+              / &nbsp;night
+            </span>
+          </div>
+          <button className="bg-redPrimary-500 font-bold md:text-lg p-1 md:p-2 text-white flex-1 rounded-lg">
+            Book Now
+          </button>
         </div>
-        <button className="bg-redPrimary-500 font-bold md:text-lg p-1 md:p-2 text-white flex-1 rounded-lg">
-          Book Now
-        </button>
       </div>
     </div>
-</div>
   );
 }
 export default AmenitiesSection;
 function AmenityItem() {
   return (
-    <li className="flex items-center mb-2">
-      <div className="bg-redPrimary-500 w-2 h-2 rounded-full p-2 m-2"></div>
-      <span className="text-grayPrimary-600 text-xl font-medium">
+    <li className="bg flex items-center xl:mb-2 text-nowrap m-1 p-1 rounded-md xl:m-0 bg-white md:bg-transparent">
+      <div className="bg-redPrimary-500 w-1 h-1 xl:w-2 xl:h-2  rounded-full p-2 m-2"></div>
+      <span className="text-grayPrimary-600 text-base xl:text-xl  font-medium">
         Smoke Detector
       </span>
     </li>

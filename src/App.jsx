@@ -6,13 +6,15 @@ import SingleHotel from "./pages/SingleHotel.jsx";
 function App() {
   return (
     <div>
-      <div className="bg-bgColor w-full">
+      {/* <div className="bg-bgColor w-full">
         <Navbar />
         <HotelContainer />
-      </div>
-      {/* <div>
-        <SingleHotel />
       </div> */}
+
+<div className="  ">
+        <SingleHotel />
+      </div>
+
     </div>
   );
 }
