@@ -1,10 +1,9 @@
 import { CiWifiOn } from "react-icons/ci";
 import { FaCat } from "react-icons/fa";
-import { AiFillAlert } from "react-icons/ai";
 function PopularLocations({hotels}) {
     const popularHotels=hotels.filter(hotel=>hotel.review_scores_rating===100)
   return (
-    <div className="bg-grayPrimary-200 m-2 p-3 rounded-xl w-full">
+    <div className="bg-grayPrimary-200 ml-1 p-3 rounded-xl w-full">
       <h2 className="text-grayPrimary-600 mb-4 font-bold text-3xl px-3 ">Popular Locations </h2>
       <div className="flex flex-col ">
         {popularHotels.map(hotel=><PopularLocation key={hotel.id} hotel={hotel} />)}

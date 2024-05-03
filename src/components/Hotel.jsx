@@ -1,13 +1,12 @@
 import { HiOutlineHeart } from "react-icons/hi";
 import { FaLocationDot } from "react-icons/fa6";
-import { useEffect, useState } from "react";
 import { Rating } from "@mui/material";
 import useWidth from "../hooks/useWidth";
 function Hotel({ hotel }) {
   const width = useWidth();
   const breakpointlg = 1000;
   return (
-    <div className="bg-white rounded-xl p-1 relative mb-2 md:m-1 ">
+    <div className="bg-white rounded-xl p-2 relative mb-2 md:m-1 ">
       <img
         className="aspect-square bg-grayPrimary-200 w-full  rounded-lg"
         src={hotel.picture_url.url}
