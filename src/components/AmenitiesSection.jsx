@@ -17,7 +17,7 @@ function AmenitiesSection() {
         <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
           <Marker position={[51.505, -0.09]}></Marker>
         </MapContainer>
-        <div className="xl:flex items-center hidden">
+        <div className="xl:flex items-center">
           <div className="flex items-center p-2">
             <span className="text-md font-bold md:text-lg">50.00 &nbsp;</span>
             <span className="text-sm text-[#85758A] md:text-lg">
