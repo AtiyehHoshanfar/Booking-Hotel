@@ -2,11 +2,13 @@ import { HiOutlineHeart } from "react-icons/hi";
 import { FaLocationDot } from "react-icons/fa6";
 import { Rating } from "@mui/material";
 import useWidth from "../hooks/useWidth";
+import { Link } from "react-router-dom";
 function Hotel({ hotel }) {
   const width = useWidth();
   const breakpointlg = 1000;
   return (
-    <div className="bg-white rounded-xl p-2 relative mb-2 md:m-1 ">
+<Link to={hotel.id}>
+<div className="bg-white rounded-xl p-2 relative mb-2 md:m-1 ">
       <img
         className="aspect-square bg-grayPrimary-200 w-full  rounded-lg"
         src={hotel.picture_url.url}
@@ -22,7 +24,7 @@ function Hotel({ hotel }) {
         </h2>
         <h3 className="flex items-center text-[#85758A] md:text-xl ">
           <FaLocationDot />{" "}
-          {hotel.host_location.split(",").splice(0, 2).join("")}
+          {`${hotel.host_location.split(",").splice(0, 2).join("").substr(1, 20)}...`}
         </h3>
         <div className="flex items-center justify-between my-3">
           <div className="flex items-center">
@@ -44,6 +46,7 @@ function Hotel({ hotel }) {
         </div>
       </div>
     </div>
+</Link>
   );
 }
 export default Hotel;

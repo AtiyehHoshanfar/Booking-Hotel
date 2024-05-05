@@ -1,20 +1,15 @@
-
-import Navbar from "./components/Navbar/Navbar";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import HotelContainer from "./components/HotelContainer";
 import SingleHotel from "./pages/SingleHotel.jsx";
+import FirstPage from "./pages/FirstPage.jsx";
 function App() {
   return (
     <div>
-      {/* <div className="bg-bgColor w-full">
-        <Navbar />
-        <HotelContainer />
-      </div> */}
 
-<div className="  ">
-        <SingleHotel />
-      </div>
-
+        <Routes>
+          <Route path="/" element={<FirstPage/>}/>
+          <Route path="/:id" element={<SingleHotel/>}/>
+        </Routes>
     </div>
   );
 }
