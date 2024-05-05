@@ -1,0 +1,9 @@
+.amenity-map.leaflet-container {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.4rem;
+   height: 200px; 
+   z-index: 0; 
+}
+

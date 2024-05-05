@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import AmenitiesSection from "../components/AmenitiesSection";
+import AmenitiesSection from "../components/AmenitiesSection/AmenitiesSection";
 import HotelDetails from "../components/HotelDetails";
 import useFetch from "../hooks/useFetch";
 

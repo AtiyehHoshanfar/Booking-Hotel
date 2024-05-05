@@ -1,4 +1,5 @@
 import { MapContainer, Marker } from "react-leaflet";
+import "../AmenitiesSection/AmenitiesSection.css"
 function AmenitiesSection({ selectedHotel }) {
   let center;
   if (selectedHotel) {
@@ -13,14 +14,13 @@ function AmenitiesSection({ selectedHotel }) {
         </h2>
 
         <ul
-          className="flex flex-row xl:flex-col mb-2 p-2 overflow-x-auto overflow-auto max-h-[30rem
-         ] "
+          className="flex flex-row xl:flex-col mb-2 p-2  overflow-auto max-h-[30rem] "
         >
           {selectedHotel?.amenities.map((amenity, index) => (
             <AmenityItem key={index} amenity={amenity} />
           ))}
         </ul>
-        <MapContainer center={center} zoom={13} scrollWheelZoom={true}>
+        <MapContainer className="amenity-map" center={center} zoom={13} scrollWheelZoom={true}>
           <Marker position={center}></Marker>
         </MapContainer>
         <div className="flex items-center p-3 bg-white xl:relative z-50 fixed bottom-0 right-0 w-full m-0">
@@ -41,7 +41,7 @@ function AmenitiesSection({ selectedHotel }) {
     </div>
   );
 }
-export default AmenitiesSection;
+export default AmenitiesSection; 
 function AmenityItem({ amenity }) {
   return (
     <li className="bg flex items-center xl:mb-2 text-nowrap m-1 p-1 rounded-md xl:m-0 bg-white md:bg-transparent">

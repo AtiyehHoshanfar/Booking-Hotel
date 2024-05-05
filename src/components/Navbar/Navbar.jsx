@@ -1,37 +1,11 @@
-import { useState } from "react";
+
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
-import { FaPerson, FaBaby, FaBed } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa";
-import { addDays } from "date-fns";
+
 
 function Navbar() {
-  const [filterItems, setFilterItems] = useState([
-    { type: "Adults", count: 1, minLength: 1, icon: <FaPerson /> },
-    { type: "Children", count: 1, minLength: 0, icon: <FaBaby /> },
-    { type: "Rooms", count: 1, minLength: 1, icon: <FaBed /> },
-
-  ]);
-
-  const [date, setDate] = useState([
-    {
-      startDate: new Date(),
-      endDate: addDays(new Date(), 7),
-      key: "selection",
-    },
-  ]);
-  const handleOperation = (type, operation) => {
-    setFilterItems((prevItems) =>
-      prevItems.map((filterItem) => {
-        return filterItem.type === type && operation === "inc"
-          ? { ...filterItem, count: filterItem.count++ }
-          : filterItem.type === type && operation === "dec"
-          ? {...filterItem,count:filterItem.count--}
-          : filterItem;
-      })
-    );
-  };
-  return (
+return (
     <div className="container mx-auto">
       <div className="p-2">
         <div className="flex items-center mb-2">
@@ -43,13 +17,8 @@ function Navbar() {
           </h2>
         </div>
 
-        <MobileNavbar
-          filterItems={filterItems}
-          onSetOperation={handleOperation}
-          date={date}
-          setDate={setDate}
-        />
-        <DesktopNavbar filterItems={filterItems}  onSetOperation={handleOperation} />
+        <MobileNavbar/>
+        <DesktopNavbar />
       </div>
     </div>
   );

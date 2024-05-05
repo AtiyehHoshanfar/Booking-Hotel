@@ -215,9 +215,8 @@
         "Hangers",
         "Hair dryer",
         "Iron",
-        "Laptop friendly workspace",
-        "translation missing: en.hosting_amenity_49",
-        "translation missing: en.hosting_amenity_50"
+        "Laptop friendly workspace"
+
       ],
       "square_feet": null,
       "price": 95,
@@ -252,8 +251,8 @@
       "calculated_host_listings_count": 1,
       "reviews_per_month": 0.99,
       "geolocation": {
-        "lon": 4.8738603256015365,
-        "lat": 52.36137101269532
+        "lon": 40.8738603256015365,
+        "lat": 50.36137101269532
       },
       "features": [
         "Host Is Superhost",
@@ -380,8 +379,8 @@
       "calculated_host_listings_count": 2,
       "reviews_per_month": null,
       "geolocation": {
-        "lon": 4.875639539930118,
-        "lat": 52.36456756846072
+        "lon": 14.875639539930118,
+        "lat": 12.36456756846072
       },
       "features": [
         "Host Has Profile Pic",
@@ -520,7 +519,7 @@
       "calculated_host_listings_count": 1,
       "reviews_per_month": 0.11,
       "geolocation": {
-        "lon": 4.8740486118580595,
+        "lon": 32.8740486118580595,
         "lat": 52.36464636933365
       },
       "features": [
@@ -649,8 +648,8 @@
       "calculated_host_listings_count": 1,
       "reviews_per_month": 0.21,
       "geolocation": {
-        "lon": 4.859091947726598,
-        "lat": 52.358295084395394
+        "lon": 44.859091947726598,
+        "lat": 67.358295084395394
       },
       "features": [
         "Host Has Profile Pic",
@@ -777,8 +776,8 @@
       "calculated_host_listings_count": 1,
       "reviews_per_month": 0.63,
       "geolocation": {
-        "lon": 4.865594943841575,
-        "lat": 52.36667871194905
+        "lon": 12.865594943841575,
+        "lat": 43.36667871194905
       },
       "features": [
         "Host Has Profile Pic"
@@ -906,8 +905,8 @@
       "calculated_host_listings_count": 1,
       "reviews_per_month": null,
       "geolocation": {
-        "lon": 4.871988086041219,
-        "lat": 52.36375757335638
+        "lon": 11.871988086041219,
+        "lat": 12.36375757335638
       },
       "features": [
         "Host Has Profile Pic",
@@ -1039,8 +1038,8 @@
       "calculated_host_listings_count": 1,
       "reviews_per_month": 0.12,
       "geolocation": {
-        "lon": 4.853345068114508,
-        "lat": 52.37080138742488
+        "lon": 14.853345068114508,
+        "lat": 15.37080138742488
       },
       "features": [
         "Host Has Profile Pic"
@@ -1176,8 +1175,8 @@
       "calculated_host_listings_count": 1,
       "reviews_per_month": 0.18,
       "geolocation": {
-        "lon": 4.876026104903436,
-        "lat": 52.3651869694861
+        "lon": 16.876026104903436,
+        "lat": 17.3651869694861
       },
       "features": [
         "Host Has Profile Pic",
@@ -1310,8 +1309,8 @@
       "calculated_host_listings_count": 2,
       "reviews_per_month": 0.13,
       "geolocation": {
-        "lon": 4.861157573506015,
-        "lat": 52.368466776562
+        "lon": 17.861157573506015,
+        "lat": 18.368466776562
       },
       "features": [
         "Host Is Superhost",

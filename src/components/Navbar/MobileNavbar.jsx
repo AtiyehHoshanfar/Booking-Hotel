@@ -9,16 +9,21 @@ import Modal from "../Modal";
 import Options from "../Options";
 import DateRanger from "../DateRanger";
 import { format } from "date-fns";
-export default function MobileNavbar({ filterItems, onSetOperation,date,setDate }) {
+import useOptions from "../../hooks/useOptions";
+import useDate from "../../hooks/useDate";
+export default function MobileNavbar() {
+  const {date,setDate}=useDate()
   const [search, setSearch] = useState("");
+  const {filterItems}=useOptions()
   const [OpenModalOption, setOpenModalOption] = useState(false);
   const [OpenModalDate, setOpenModalDate] = useState(false);
   const { data } = useFetch("http://localhost:3000/hotels", search);
+
   const handleSearch = () => {
     const foundHotel = data.filter((hotel) =>
       hotel.name.toLowerCase().includes(search.toLowerCase())
     );
-    console.log(foundHotel);
+
   };
   const handleOptions = () => {
     setOpenModalOption((isOpen) => !isOpen);
@@ -76,12 +81,12 @@ export default function MobileNavbar({ filterItems, onSetOperation,date,setDate 
       </div>
 
       {OpenModalOption && (
-        <Modal onClick={setOpenModalOption}>
-          <Options filterItems={filterItems} onSetOperation={onSetOperation} />
+        <Modal cb={setOpenModalOption}>
+          <Options />
         </Modal>
       )}
       {OpenModalDate && (
-        <Modal onClick={setOpenModalDate}>
+        <Modal cb={setOpenModalDate}>
           <DateRanger date={date} setDate={setDate}/>
         </Modal>
       )}
